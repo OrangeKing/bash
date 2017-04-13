@@ -1,0 +1,1 @@
+awk -F ';' 'BEGIN {sum=0} {for (i=1; i<=NF; i++) a[i]+=$i }{print $0} END {{print "----------------"}for (i in a) { printf "%d;",a[i] }; {printf "\n"} }' almostlikecsv

@@ -12,12 +12,13 @@ then
 
 fi 
 
-cat $1 | while read i
+cat $1 | while read line
 do
 	sum=0
-	for num in $i
+
+	for num in $line
 	do
 		sum=$(($sum + $num))
 	done
-	echo "$i Sum: $sum"
+	echo "$line || sum: $sum"
 done
